@@ -1,11 +1,12 @@
 CSTUFF=gcc -O2 -Wall $(DEBUG)
+LFLAGS= -lm -lglfw3
 
 .PHONY: clean remake debug
 
 run: main.o
 	$(CSTUFF) main.o -o run
 
-main.o: main.c
+main.o: main.c Makefile
 	$(CSTUFF) -c main.c
 
 clean:
