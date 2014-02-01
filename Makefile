@@ -4,7 +4,7 @@ LFLAGS= -lm -lglfw3
 .PHONY: clean remake debug
 
 run: main.o
-	$(CSTUFF) main.o -o run
+	$(CSTUFF) main.o -lglfw -o run
 
 main.o: main.c Makefile
 	$(CSTUFF) -c main.c
