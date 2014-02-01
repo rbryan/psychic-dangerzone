@@ -3,7 +3,7 @@ CSTUFF=gcc -O2 -Wall $(DEBUG)
 .PHONY: clean remake debug
 
 run: main.o
-	$(CSTUFF) main.o -o run
+	$(CSTUFF) main.o -lglfw -o run
 
 main.o: main.c
 	$(CSTUFF) -c main.c
