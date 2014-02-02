@@ -3,12 +3,13 @@
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
 
-SDL_Window* winderp;
-//SDL_Renderer* render;
-//SDL_Texture* texture;
-SDL_GLContext glCon;
-
 int main(int argc, char** argv){
+	
+	SDL_Window* window;
+	SDL_Renderer* render;
+	SDL_Texture* texture;
+	SDL_GLContext glCon;
+
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS);
 	winderp = SDL_CreateWindow("Behold OpenGL", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 750, 750, 0);
 //	render = SDL_CreateRenderer(winderp, -1, 0);
