@@ -1,5 +1,6 @@
 CSTUFF=gcc -O2 -Wall $(DEBUG)
-LFLAGS= -lm -lglfw -lGLEW -lXi -lGL -lX11 -lXxf86vm -pthread -lXrandr
+#LFLAGS= -lm -lGLEW -lXi -lGL -lX11 -lXxf86vm -pthread -lXrandr
+LFLAGS=-lm -lSDL2
 
 .PHONY: clean remake debug
 
