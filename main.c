@@ -15,10 +15,13 @@ int main(int argc, char** argv){
 //	render = SDL_CreateRenderer(window, -1, 0);
 //	texture = SDL_CreateTexture(render, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, 750, 750);
 	glCon = SDL_GL_CreateContext(window);
-	glClearColor(1, 1, 1, 1);
+	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
-	char data[] = {0xFF, 0x00, 0x00, 0xFF, 0, 0, 200, 200};
-	glDrawElements(GL_LINES, 1, GL_UNSIGNED_BYTE, data);
+	glPointSize(20);
+	glBegin(GL_POINTS);
+	glColor3f(1, 0, 0);
+	glVertex3f(0, 0, 0);
+	glEnd();
 	SDL_GL_SwapWindow(window);
 	SDL_Event event = {0};
 	while(event.type!=SDL_QUIT)
